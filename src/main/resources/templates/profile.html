@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Profile</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Inter.css">
+    <link rel="stylesheet" href="assets/css/untitled.css">
+</head>
+
+<body>
+<!-- header -->
+<div th:replace="~{header :: header}">...</div>
+<!-- //header -->
+    <h1 style="text-align: center;margin: 76px;">Profile</h1>
+<ul>
+    <li class="alert alert-danger" role="alert" th:each="error : ${#fields.errors('profile.*')}" th:text="${error}" />
+</ul>
+    <div class="container" style="margin-bottom: 41px;padding-bottom: 0px;padding-top: 0px;margin-top: 98px;">
+        <form th:action="@{/updateProfile}" method="post" th:object="${profile}" style="display: flex;flex-direction : column;justify-content:center; align-items:center">
+            <div >
+                <p>Name</p><input th:field="*{name}" class="form-control" type="text" style="width: 300px;opacity: 1;">
+            </div>
+            <div >
+                <p>Mobile Number</p><input th:field="*{mobileNumber}" class="form-control" type="text" style="width: 300px;opacity: 1;">
+            </div>
+            <div >
+                <p>Email</p><input th:field="*{email}" class="form-control" type="email" style="width: 300px;opacity: 1;">
+            </div>
+            <div >
+                <p>Address</p><input th:field="*{address1}" class="form-control" type="text" style="width: 300px;opacity: 1;">
+            </div>
+            <div>
+                <button class="btn btn-primary">Update</button>
+            </div>
+
+        </form>
+    </div>
+    <!-- footer block -->
+    <div th:replace="~{footer :: footer}">...</div>
+    <!-- //footer block -->
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="assets/js/bold-and-dark.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>VinService</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Inter.css">
+    <link rel="stylesheet" href="assets/css/untitled.css">
+</head>
+
+<body>
+<!-- header -->
+<div th:replace="~{header :: header}">...</div>
+<!-- //header -->
+<header class="bg-dark">
+    <div class="container pt-4 pt-xl-5">
+        <div class="row pt-5">
+            <div class="col-md-8 col-xl-6 text-center text-md-start mx-auto">
+                <div class="text-center">
+                    <p class="fw-bold text-success mb-2">Voted #1 Students</p>
+                    <h1 class="fw-bold">The best solution for you and your home</h1>
+                </div>
+            </div>
+            <div class="col-12 col-lg-10 mx-auto">
+                <div class="position-relative" style="display: flex;flex-wrap: wrap;justify-content: flex-end;">
+                    <div style="position: relative;flex: 0 0 45%;transform: translate3d(-15%, 35%, 0);"><img class="img-fluid" data-bss-parallax="" data-bss-parallax-speed="0.8" src="assets/img/products/350875729.jpeg"></div>
+                    <div style="position: relative;flex: 0 0 45%;transform: translate3d(-5%, 20%, 0);"><img class="img-fluid" data-bss-parallax="" data-bss-parallax-speed="0.4" src="assets/img/products/352706124.jpeg"></div>
+                    <div style="position: relative;flex: 0 0 60%;transform: translate3d(0, 0%, 0);"><img class="img-fluid" data-bss-parallax="" data-bss-parallax-speed="0.25" src="assets/img/products/413944991.jpeg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+    <section class="py-5">
+        <div class="container text-center py-5">
+            <p class="mb-4" style="font-size: 1.6rem;">Used by <span class="text-success"><strong>1+</strong></span>&nbsp;of the best people in Vinhome.</p><a href="#"> </a>
+        </div>
+    </section>
+    <section>
+        <div class="container bg-dark py-5">
+            <div class="row">
+                <div class="col-md-8 col-xl-6 text-center mx-auto">
+                    <p class="fw-bold text-success mb-2">Our Services</p>
+                    <h3 class="fw-bold">What we can do for you</h3>
+                </div>
+            </div>
+            <div class="py-5 p-lg-5">
+                <div class="row row-cols-1 row-cols-md-2 mx-auto" style="max-width: 900px;">
+                    <div class="col mb-5">
+                        <div class="card shadow-sm">
+                            <div class="card-body px-4 py-5 px-md-5" style="padding-bottom: 33px;">
+                                <div class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon" style="top: 1rem;right: 1rem;position: absolute;"></div>
+                                <h5 class="fw-bold card-title">Clean your house</h5>
+                                <p class="text-muted card-text mb-4">After you choose this service, you will have our staff clean everything in your house</p><button class="btn btn-primary shadow" type="button" style="margin-top: 25px;"><a class="nav-link" th:href="@{/pricing}">Learn more</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card shadow-sm">
+                            <div class="card-body px-4 py-5 px-md-5">
+                                <div class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon" style="top: 1rem;right: 1rem;position: absolute;"></div>
+                                <h5 class="fw-bold card-title">Move your house</h5>
+                                <p class="text-muted card-text mb-4">After you choose this service, you will have our staff move all your belongings to a new house.</p><button class="btn btn-primary shadow" type="button"><a class="nav-link" th:href="@{/pricing}">Learn more</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-4">
+                        <div class="card shadow-sm">
+                            <div class="card-body px-4 py-5 px-md-5">
+                                <div class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon" style="top: 1rem;right: 1rem;position: absolute;"></div>
+                                <h5 class="fw-bold card-title">Decoration and design</h5>
+                                <p class="text-muted card-text mb-4">After you choose this service, you will have our staff come and design your house, and then decorate it.</p><button class="btn btn-primary shadow" type="button"><a class="nav-link" th:href="@{/pricing}">Learn more</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-4">
+                        <div class="card shadow-sm">
+                            <div class="card-body px-4 py-5 px-md-5">
+                                <div class="bs-icon-lg d-flex justify-content-center align-items-center mb-3 bs-icon" style="top: 1rem;right: 1rem;position: absolute;"></div>
+                                <h5 class="fw-bold card-title">Home maintenance</h5>
+                                <p class="text-muted card-text mb-4">After you choose this service, you will have our staff come and check and repair doors, air conditioners,...</p><button class="btn btn-primary shadow" type="button"><a class="nav-link" th:href="@{/pricing}">Learn more</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container py-5">
+            <div class="mx-auto" style="max-width: 900px;"></div>
+        </div>
+    </section>
+    <section class="py-5 mt-5">
+        <div class="container py-5">
+            <div class="row mb-5">
+                <div class="col-md-8 col-xl-6 text-center mx-auto">
+                    <p class="fw-bold text-success mb-2">Testimonials</p>
+                    <h2 class="fw-bold"><strong>What People Say About us</strong></h2>
+                    <p class="text-muted">No matter the project, our team can handle it.&nbsp;</p>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 d-sm-flex justify-content-sm-center">
+                <div class="col mb-4">
+                    <div class="d-flex flex-column align-items-center align-items-sm-start">
+                        <p class="bg-dark border rounded border-dark p-4">Nisi sit justo faucibus nec ornare amet, tortor torquent. Blandit class dapibus, aliquet morbi.</p>
+                        <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="assets/img/team/avatar2.jpg">
+                            <div>
+                                <p class="fw-bold text-primary mb-0">John Smith</p>
+                                <p class="text-muted mb-0">Erat netus</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="d-flex flex-column align-items-center align-items-sm-start">
+                        <p class="bg-dark border rounded border-dark p-4">Nisi sit justo faucibus nec ornare amet, tortor torquent. Blandit class dapibus, aliquet morbi.</p>
+                        <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="assets/img/team/avatar4.jpg">
+                            <div>
+                                <p class="fw-bold text-primary mb-0">John Smith</p>
+                                <p class="text-muted mb-0">Erat netus</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="d-flex flex-column align-items-center align-items-sm-start">
+                        <p class="bg-dark border rounded border-dark p-4">Nisi sit justo faucibus nec ornare amet, tortor torquent. Blandit class dapibus, aliquet morbi.</p>
+                        <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="assets/img/team/avatar5.jpg">
+                            <div>
+                                <p class="fw-bold text-primary mb-0">John Smith</p>
+                                <p class="text-muted mb-0">Erat netus</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md-8 col-xl-6 text-center mx-auto">
+                    <p class="fw-bold text-success mb-2">Contacts</p>
+                    <h2 class="fw-bold">How you can reach us</h2>
+                </div>
+            </div>
+        </div>
+        <section>
+            <div class="container py-5">
+                <div class="mx-auto" style="max-width: 900px;">
+                    <div class="row row-cols-1 row-cols-md-2 d-flex justify-content-center">
+                        <div class="col mb-4" th:href="@{/contact}">
+                            <div class="card bg-primary-light">
+                                <div class="card-body text-center px-4 py-5 px-md-5">
+                                    <p class="fw-bold text-primary card-text mb-2">Call us</p>
+                                    <h5 class="fw-bold card-title mb-3">You can contact us by calling phone number : +84 866671519</h5><button class="btn btn-primary btn-sm" type="button"><a class="nav-link" th:href="@{/contact}">Learn more</a></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mb-4" th:href="@{/contact}">
+                            <div class="card bg-info-light">
+                                <div class="card-body text-center px-4 py-5 px-md-5">
+                                    <p class="fw-bold text-info card-text mb-2">Go to Contact</p>
+                                    <h5 class="fw-bold card-title mb-3">Lorem ipsum dolor sit&nbsp;nullam et quis ad cras porttitor</h5><button class="btn btn-info btn-sm" type="button"><a class="nav-link" th:href="@{/contact}">Learn more</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="py-5">
+        <div class="container">
+            <div class="bg-dark border rounded border-dark d-flex flex-column justify-content-between align-items-center flex-lg-row p-4 p-lg-5">
+                <div class="text-center text-lg-start py-3 py-lg-1">
+                    <h2 class="fw-bold mb-2">Subscribe to our newsletter</h2>
+                    <p class="mb-0">Imperdiet consectetur dolor.</p>
+                </div>
+                <form class="d-flex justify-content-center flex-wrap flex-lg-nowrap" method="post">
+                    <div class="my-2"><input class="border rounded-pill shadow-sm form-control" type="email" name="email" placeholder="Your Email"></div>
+                    <div class="my-2"><button class="btn btn-primary shadow ms-2" type="submit">Subscribe </button></div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- footer block -->
+    <div th:replace="~{footer :: footer}">...</div>
+    <!-- //footer block -->
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="assets/js/bold-and-dark.js"></script>
+</body>
+
+</html>

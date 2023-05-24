@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>404-NotFound</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Inter.css">
+    <link rel="stylesheet" href="assets/css/untitled.css">
+</head>
+
+<body>
+<!-- header -->
+<div th:replace="~{header :: header}">...</div>
+<!-- //header -->
+    <div class="container" style="margin-top: 41px;margin-bottom: 41px;padding-bottom: 0px;height: 487px;">
+        <section class="py-4 py-xl-5">
+            <div class="container">
+                <div class="text-center p-4 p-lg-5">
+                    <p class="fw-bold text-primary mb-2">I THINK YOU LOST</p>
+                    <h1 class="fw-bold mb-4" style="font-size: 176px;">404</h1><button class="btn btn-primary fs-5 me-2 py-2 px-4" type="button">Back to home</button>
+                </div>
+            </div>
+        </section>
+    </div>
+<!-- footer block -->
+<div th:replace="~{footer :: footer}">...</div>
+<!-- //footer block -->
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="assets/js/bold-and-dark.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Products-User</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Inter.css">
+    <link rel="stylesheet" href="assets/css/untitled.css">
+</head>
+
+<body>
+<div th:replace="~{header :: header}">...</div>
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="row mb-4 mb-lg-5">
+                <div class="col-md-8 col-xl-6 text-center mx-auto">
+                    <h2 class="fw-bold">Products</h2>
+                    <p class="text-muted">No matter the project, our team can handle it.&nbsp;</p>
+                </div>
+            </div>
+        </div>
+    </section>
+<div class="table-responsive" style="margin-bottom: -1px;padding-bottom: 100px">
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Product ID</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Image</th>
+            <th scope="col"></th>
+
+        </tr>
+
+        </thead>
+        <tbody>
+        <tr th:each="product: ${products}">
+            <td th:text="${product.productId}"></td>
+            <td th:text="${product.name}"></td>
+            <td th:text="${product.fees}"></td>
+            <td>
+                <img th:src="@{|data:image/jpeg;base64,${product.image}|}" alt="Product Image" style="width: 100px; height: 100px;"/>
+            </td>
+            <td><a th:href="@{/viewProduct(id=${product.productId})}" class="btn btn-primary">View</a></td>
+            <td><a th:href="@{/addToCart(id=${product.productId})}" class="btn btn-primary">Buy</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</div>
+<div class="container" style="height: 610px;padding-top: 100px;margin-top: 153px;"></div>
+<!-- footer block -->
+<div th:replace="~{footer :: footer}">...</div>
+<!-- //footer block -->
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="assets/js/bold-and-dark.js"></script>
+</body>
+
+</html>
