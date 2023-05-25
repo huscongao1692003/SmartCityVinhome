@@ -1,6 +1,8 @@
 package com.thanhnguyen.smartCity.controller;
 
+import com.thanhnguyen.smartCity.model.Person;
 import com.thanhnguyen.smartCity.model.Product;
+import com.thanhnguyen.smartCity.repository.PersonRepository;
 import com.thanhnguyen.smartCity.repository.ProductRepository;
 import com.thanhnguyen.smartCity.service.ProductService;
 import com.thanhnguyen.smartCity.ultils.ImageUtils;
@@ -18,12 +20,17 @@ import java.util.Base64;
 import java.util.List;
 import java.util.Optional;
 
+import static org.springframework.web.bind.annotation.RequestMethod.GET;
+
 @Slf4j
 @Controller
 public class ProductController {
 
     @Autowired
     ProductRepository productRepository;
+
+    @Autowired
+    PersonRepository personRepository;
 
     @Autowired
     private ProductService productService;
@@ -60,6 +67,34 @@ public class ProductController {
                               @RequestParam("fees") int fees)
     {
         productService.saveProductToDB(file, name, fees);
+        return "redirect:/displayProduct";
+    }
+
+    @RequestMapping(value = "/deleteProduct",method = GET)
+    public ModelAndView deleteProduct(Model model ,@RequestParam int id)
+    {
+        Optional<Product> product = productRepository.findById(id);
+        for(Person person : product.get().getPersons()){
+            person.setProducts(null);
+            personRepository.save(person);
+        }
+        productRepository.deleteById(id);
+        ModelAndView modelAndView = new ModelAndView("redirect:/displayProduct");
+        return modelAndView;
+    }
+    @PostMapping("/changeName")
+    public String changePname(@RequestParam("id") int id,
+                              @RequestParam("newName") String name)
+    {
+        productService.chageProductName(id, name);
+        return "redirect:/displayProduct";
+    }
+
+    @PostMapping("/changePrice")
+    public String changePrice(@RequestParam("id") int id ,
+                              @RequestParam("newPrice") int fees)
+    {
+        productService.changeProductPrice(id, fees);
         return "redirect:/displayProduct";
     }
 

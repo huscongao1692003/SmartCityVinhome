@@ -40,9 +40,9 @@ public class ProductService {
         return productRepo.findAll();
     }
 
-    public void deleteProductById(int productId) {
-        productRepo.deleteById(productId);
-    }
+//    public void deleteProductById(int productId) {
+//        productRepo.deleteById(productId);
+//    }
 
     public void chageProductName(int productId, String name) {
         Product product = new Product();

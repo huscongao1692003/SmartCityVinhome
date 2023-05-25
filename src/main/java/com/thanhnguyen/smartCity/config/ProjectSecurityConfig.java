@@ -40,6 +40,8 @@ public class ProjectSecurityConfig {
                 .requestMatchers("/about").permitAll()
                 .requestMatchers("/login").permitAll()
                 .requestMatchers("/displayProduct").hasRole("ADMIN")
+                .requestMatchers("/deleteProduct/**").hasRole("ADMIN")
+                .requestMatchers("/viewProduct").hasRole("ADMIN")
                 .requestMatchers("/logout").permitAll()
                 .requestMatchers("/assets/**").permitAll()
                 .requestMatchers("/public/**").permitAll()
