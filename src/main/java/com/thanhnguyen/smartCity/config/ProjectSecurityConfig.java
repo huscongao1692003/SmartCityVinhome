@@ -34,6 +34,7 @@ public class ProjectSecurityConfig {
                 .requestMatchers("/updateProfile").authenticated()
                 .requestMatchers("/").permitAll()
                 .requestMatchers("/contact").permitAll()
+                .requestMatchers("/cart").permitAll()
                 .requestMatchers("/product").permitAll()
                 .requestMatchers("/pricing").permitAll()
                 .requestMatchers("/saveMsg").permitAll()
