@@ -27,8 +27,8 @@
         <li class="nav-item" sec:authorize="isAuthenticated()"><a class="nav-link" th:href="@{/dashboard}">Dashboard</a></li>
         <li class="nav-item"></li>
       </ul>
-      <span class="has-quantity reflow-cart-toggler has-summary" data-reflow-type="view-cart" data-reflow-summary-type="dropdown" style="margin-right: 51px;" data-reflow-count="4"><span>Cart</span>
-        <div id="toggle-drop" class="ref-summary close dropdown">
+      <span class="has-quantity reflow-cart-toggler has-summary" data-reflow-type="view-cart" data-reflow-summary-type="dropdown" style="margin-right: 51px;" data-reflow-count="4"><span onclick="changeClass()" id="btn_cart">Cart</span>
+        <div id="drop" class="ref-summary undefined dropdown">
         <div class="ref-summary-header">
             <h5 class="ref-summary-title">Cart</h5>
             <div class="ref-close-button">×</div>
@@ -47,7 +47,7 @@
                 </div>
             </div>
         </div>
-        <div class="ref-summary-footer"><a class="ref-button" href="#"></a></div>
+        <div class="ref-summary-footer"><a class="ref-button" href="#">Check Out</a></div>
     </div>
 </span>
       <ul class="navbar-nav">
@@ -64,10 +64,8 @@
 </nav>
   </div>
 </header>
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="https://cdn.reflowhq.com/v2/toolkit.min.js"></script>
-<script src="assets/js/bs-init.js"></script>
-<script src="assets/js/bold-and-dark.js"></script>
+
+
 </body>
 
 </html>
