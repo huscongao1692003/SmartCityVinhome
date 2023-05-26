@@ -42,6 +42,19 @@
     <!-- footer block -->
     <div th:replace="~{footer :: footer}">...</div>
     <!-- //footer block -->
+<script>
+    function changeClass() {
+  var drop = document.getElementById("drop");
+if(drop.classList.contains("undefined")){
+  drop.classList.add("open");
+    drop.classList.remove("undefined");
+  }else{
+    drop.classList.add("undefined");
+    drop.classList.remove("open");
+  }
+
+}
+</script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="https://cdn.reflowhq.com/v2/toolkit.min.js"></script>
 <script src="assets/js/bs-init.js"></script>

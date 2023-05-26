@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Service-User</title>
+  <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.reflowhq.com/v2/toolkit.min.css">
+  <link rel="stylesheet" href="/assets/css/Inter.css">
+  <link rel="stylesheet" href="/assets/css/untitled.css">
+</head>
+
+<body style="height: 1041.344px;">
+<!-- header -->
+<div th:replace="~{header :: header}">...</div>
+<!-- //header -->
+<div class="container" style="margin-top: 41px;margin-bottom: 41px;padding-bottom: 0px;height: 487px;">
+  <div style="height: 231px;">
+    <h1 style="font-size: 27px;padding-top: 26px;">Add User To Service</h1>
+    <form th:action="@{/admin/addUser}" method="post" th:object="${person}">
+      <p style="margin-bottom: 10px;padding-top: 0px;margin-top: 34px;margin-right: 407px;">Enter User Email:</p>
+      <input th:field="*{email}" class="form-control" type="email" style="width: 429px;display: initial;margin: 10px 39px;" required placeholder="Enter email">
+      <button class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  <div class="table-responsive" style="padding-top: 84px;margin-bottom: -1px;padding-bottom: 0px;">
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Mobile Num</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr th:each="person: ${service.persons}">
+        <td th:text="${person.name}"></td>
+        <td th:text="${person.email}"></td>
+        <td th:text="${person.mobileNumber}"></td>
+        <td><a th:href="@{/admin/deleteUser(personId=${person.personId})}" class="btn btn-warning">DELETE</a></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="container" style="height: 210px;"></div>
+<!-- footer block -->
+<div th:replace="~{footer :: footer}">...</div>
+<!-- //footer block -->
+<script>
+    function changeClass() {
+  var drop = document.getElementById("drop");
+if(drop.classList.contains("undefined")){
+  drop.classList.add("open");
+    drop.classList.remove("undefined");
+  }else{
+    drop.classList.add("undefined");
+    drop.classList.remove("open");
+  }
+
+}
+</script>
+<script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="https://cdn.reflowhq.com/v2/toolkit.min.js"></script>
+<script src="/assets/js/bs-init.js"></script>
+<script src="/assets/js/bold-and-dark.js"></script>
+</body>
+
+</html>

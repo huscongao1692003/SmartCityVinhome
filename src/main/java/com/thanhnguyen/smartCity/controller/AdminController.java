@@ -64,7 +64,7 @@ public class AdminController {
     public ModelAndView displayStudents(Model model, @RequestParam int serId, HttpSession session,
                                         @RequestParam(value = "error", required = false) String error) {
         String errorMessage = null;
-        ModelAndView modelAndView = new ModelAndView("users.html");
+        ModelAndView modelAndView = new ModelAndView("user.html");
         Optional<Service> service = serviceRepository.findById(serId);
         modelAndView.addObject("service",service.get());
         modelAndView.addObject("person",new Person());
@@ -82,7 +82,7 @@ public class AdminController {
         Service service = (Service) session.getAttribute("service");
         Person personEntity = personRepository.readByEmail(person.getEmail());
         if(personEntity==null || !(personEntity.getPersonId()>0)){
-            modelAndView.setViewName("redirect:/admin/displayUsers?classId="+service.getServiceId()
+            modelAndView.setViewName("redirect:/admin/displayUsers?serviceId="+service.getServiceId()
                     +"&error=true");
             return modelAndView;
         }
@@ -90,7 +90,7 @@ public class AdminController {
         personRepository.save(personEntity);
         service.getPersons().add(personEntity);
         serviceRepository.save(service);
-        modelAndView.setViewName("redirect:/admin/displayStudents?classId="+service.getServiceId());
+        modelAndView.setViewName("redirect:/admin/displayStudents?serviceId="+service.getServiceId());
         return modelAndView;
     }
 
@@ -102,7 +102,7 @@ public class AdminController {
         service.getPersons().remove(person.get());
         Service serviceSaved = serviceRepository.save(service);
         session.setAttribute("service",serviceSaved);
-        ModelAndView modelAndView = new ModelAndView("redirect:/admin/displayUsers?classId="+service.getServiceId());
+        ModelAndView modelAndView = new ModelAndView("redirect:/admin/displayUsers?serviceId="+service.getServiceId());
         return modelAndView;
     }
 
