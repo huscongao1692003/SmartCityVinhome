@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46694ebf-2257-44c8-8084-1591b71ee5e4" name="Changes" comment="adding Websocket(chat)">
+    <list default="true" id="46694ebf-2257-44c8-8084-1591b71ee5e4" name="Changes" comment="fix some bug in Message">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/controller/DonateController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/IMG_6464.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/donate.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/config/ProjectSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/config/ProjectSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/controller/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/controller/ChatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/chat.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/chat.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/thanhnguyen/smartCity/config/ProjectSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thanhnguyen/smartCity/config/ProjectSecurityConfig.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,8 +23,8 @@
       <list>
         <option value="AnnotationType" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -71,11 +72,11 @@
       <recent name="com.thanhnguyen.smartCity.model" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/static/assets/img" />
+      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
       <recent name="$PROJECT_DIR$/src/main/resources/static/assets/css" />
       <recent name="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap/css" />
       <recent name="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap/js" />
-      <recent name="$PROJECT_DIR$/src/main/resources/static/assets/js" />
-      <recent name="$PROJECT_DIR$/src/main/resources/static/assets/fonts" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.thanhnguyen.smartCity.model" />
@@ -166,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685175473445</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fix some bug in Message">
+      <created>1685255692054</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1685255692054</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -190,7 +198,8 @@
     <MESSAGE value="fix bug when click on cart" />
     <MESSAGE value="fix bug" />
     <MESSAGE value="adding Websocket(chat)" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding Websocket(chat)" />
+    <MESSAGE value="fix some bug in Message" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix some bug in Message" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

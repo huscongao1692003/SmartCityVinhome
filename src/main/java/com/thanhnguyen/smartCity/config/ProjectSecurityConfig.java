@@ -33,6 +33,7 @@ public class ProjectSecurityConfig {
                 .requestMatchers("/user/**").hasRole("USER")
                 .requestMatchers("/updateProfile").authenticated()
                 .requestMatchers("/").permitAll()
+                .requestMatchers("/donate").permitAll()
                 .requestMatchers("/contact").permitAll()
                 .requestMatchers("/cart").permitAll()
                 .requestMatchers("/product").permitAll()
