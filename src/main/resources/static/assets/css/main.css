@@ -20,6 +20,9 @@ body {
     background-color: #f4f4f4;
     height: 100%;
 }
+title-chat {
+color: black;
+}
 
 body:before {
     height: 50%;

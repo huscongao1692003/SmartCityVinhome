@@ -37,7 +37,7 @@ public class ProjectSecurityConfig {
                 .requestMatchers("/cart").permitAll()
                 .requestMatchers("/product").permitAll()
                 .requestMatchers("/topic/**").authenticated()
-                .requestMatchers("/mess/**").authenticated()
+                .requestMatchers("/messsage/**").authenticated()
                 .requestMatchers("/ws/**").authenticated()
                 .requestMatchers("/app/**").authenticated()
                 .requestMatchers("/pricing").permitAll()
