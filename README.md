@@ -17,6 +17,6 @@ Function:
 - Payment(Momo, Paypal)
 - Buy a service, product
 - Upload Image
-- Chat Realtime using Socket.io
+- Chat Realtime using Websocket(flexible to use Rabbitmq)
 ...
 
