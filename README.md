@@ -17,6 +17,7 @@ Function:
 - Payment(Momo, Paypal)
 - Buy a service, product
 - Upload Image
+- Donate(payment momo then send msg to gmail)
 - Chat Realtime using Websocket(flexible to use Rabbitmq)
 ...
 
