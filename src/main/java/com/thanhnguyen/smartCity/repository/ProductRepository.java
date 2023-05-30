@@ -10,5 +10,7 @@ import java.util.List;
 public interface ProductRepository extends JpaRepository<Product,Integer> {
     List<Product> findByOrderByName();
 
+    List<Product> findByOrderById(int productId);
+
 
 }
