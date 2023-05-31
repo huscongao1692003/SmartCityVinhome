@@ -4,14 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46694ebf-2257-44c8-8084-1591b71ee5e4" name="Changes" comment="fix some bug in Message">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/controller/DonateController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/IMG_6464.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/donate.html" afterDir="false" />
+    <list default="true" id="46694ebf-2257-44c8-8084-1591b71ee5e4" name="Changes" comment="update model for cart">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/model/Item.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/config/ProjectSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/config/ProjectSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/controller/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/account.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/product_secure.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/product_secure.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/products.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/thanhnguyen/smartCity/config/ProjectSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thanhnguyen/smartCity/config/ProjectSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thanhnguyen/smartCity/controller/CartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thanhnguyen/smartCity/controller/CartController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thanhnguyen/smartCity/model/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thanhnguyen/smartCity/model/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thanhnguyen/smartCity/repository/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thanhnguyen/smartCity/repository/ProductRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thanhnguyen/smartCity/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thanhnguyen/smartCity/service/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/account.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/product_secure.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/product_secure.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/products.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +78,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/thanhnguyen/Documents/smartCity&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -174,7 +188,21 @@
       <option name="project" value="LOCAL" />
       <updated>1685255692054</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="add donate">
+      <created>1685257050985</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1685257050985</updated>
+    </task>
+    <task id="LOCAL-00011" summary="update model for cart">
+      <created>1685448189869</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1685448189869</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -199,7 +227,9 @@
     <MESSAGE value="fix bug" />
     <MESSAGE value="adding Websocket(chat)" />
     <MESSAGE value="fix some bug in Message" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix some bug in Message" />
+    <MESSAGE value="add donate" />
+    <MESSAGE value="update model for cart" />
+    <option name="LAST_COMMIT_MESSAGE" value="update model for cart" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

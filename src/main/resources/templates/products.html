@@ -32,7 +32,6 @@
             <th scope="col">Price</th>
             <th scope="col">Image</th>
             <th scope="col"></th>
-            <th scope="col"></th>
         </tr>
 
         </thead>
@@ -44,8 +43,7 @@
             <td>
                 <img th:src="@{|data:image/jpeg;base64,${product.image}|}" alt="Product Image" style="width: 100px; height: 100px;"/>
             </td>
-            <td><a th:href="@{/viewProduct(id=${product.productId})}" class="btn btn-primary">View</a></td>
-            <td><a th:href="@{/addToCart(id=${product.productId})}" class="btn btn-primary">Buy</a></td>
+            <td><a th:href="@{/addItemToCart(productId=${product.productId})}" class="btn btn-primary">Add</a></td>
         </tr>
         </tbody>
     </table>
