@@ -4,27 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46694ebf-2257-44c8-8084-1591b71ee5e4" name="Changes" comment="update cart, fix bug">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/config/PaypalConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/controller/PaypalController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/service/PaypalService.java" afterDir="false" />
+    <list default="true" id="46694ebf-2257-44c8-8084-1591b71ee5e4" name="Changes" comment="adding paypal payment">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/config/PaypalPaymentIntent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/config/PaypalPaymentMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/cancel.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/success.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/config/ProjectSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/config/ProjectSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/controller/CartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/model/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/css/cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/cart.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/config/PaypalConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/config/PaypalConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/controller/PaypalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/controller/PaypalController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/service/PaypalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/service/PaypalService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/shopping_cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/shopping_cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/thanhnguyen/smartCity/config/ProjectSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thanhnguyen/smartCity/config/ProjectSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/thanhnguyen/smartCity/controller/CartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thanhnguyen/smartCity/controller/CartController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/thanhnguyen/smartCity/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thanhnguyen/smartCity/controller/ProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/thanhnguyen/smartCity/model/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thanhnguyen/smartCity/model/Order.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/css/cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/assets/css/cart.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thanhnguyen/smartCity/controller/PaypalController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thanhnguyen/smartCity/controller/PaypalController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thanhnguyen/smartCity/service/PaypalService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thanhnguyen/smartCity/service/PaypalService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/shopping_cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/shopping_cart.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,8 +28,8 @@
       <list>
         <option value="AnnotationType" />
         <option value="Interface" />
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -209,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685542595796</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="adding paypal payment">
+      <created>1685778187863</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1685778187863</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -237,7 +235,8 @@
     <MESSAGE value="add donate" />
     <MESSAGE value="update model for cart" />
     <MESSAGE value="update cart, fix bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="update cart, fix bug" />
+    <MESSAGE value="adding paypal payment" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding paypal payment" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

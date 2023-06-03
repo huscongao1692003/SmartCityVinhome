@@ -13,9 +13,9 @@ import java.util.Map;
 @Configuration
 public class PaypalConfig {
 
-    private static final String clientId ="ATl99ivFMXJeuxdkYdUNyyTlUDdrMNL16fjgUrhSOs_eB9xeKIFqEYsXFWv2uAy5ziG0xecLimhpZewG";
-    private static final String clientSecret="EOGdNED9dxsuOmh8Xzuiv-0CHPjBPOKdOXPfX9CqGdFTC-la3xI3bzLcwxA-Hbjv8iwIFUzjXGsGOA0W";
-    private String mode = "live";
+    private static final String clientId ="Aavwnj54toFLt6wBoB3baDDN6DE1Qy_gOJlrMEfZ0eJREpLxXiCVds20rcHRo5r-EtZP94-j2ODUvHwW";
+    private static final String clientSecret="ELdMXZ7JQ1FeZyAWa4Dk68BCS2kFj1ONAylzVSoUgB8qSfa_h0VpjDxNrbtpfum4HeG6YKsCxoBt_uWV";
+    private String mode = "sandbox";
 
     @Bean
     public Map<String, String> paypalSdkConfig() {
