@@ -65,6 +65,18 @@ public class CartController {
         if (cartItem != null) {
             totalItems = cartItem.stream().mapToInt(Item::getQuantity).sum();
         }
+
+        // Calculate total cost of items in the cart
+        List<Item> cartItems = (List<Item>) session.getAttribute("cart");
+        double totalPrice = 0;
+        if (cartItems != null) {
+            totalPrice = cartItems.stream()
+                    .mapToDouble(item -> item.getProduct().getFees() * item.getQuantity())
+                    .sum();
+        }
+        model.addAttribute("totalPrice", totalPrice);
+        session.setAttribute("totalPrice", totalPrice);
+
         model.addAttribute("totalItems", totalItems);
         session.setAttribute("totalItems", totalItems);
         model.addAttribute("cart", session.getAttribute("cart"));
@@ -86,6 +98,16 @@ public class CartController {
     public ModelAndView displayHomePage(Model model, HttpSession session) {
         ModelAndView modelAndView = new ModelAndView("shopping_cart.html");
         modelAndView.addObject("cart",session.getAttribute("cart"));
+        // Calculate total cost of items in the cart
+        List<Item> cartItems = (List<Item>) session.getAttribute("cart");
+        double totalPrice = 0;
+        if (cartItems != null) {
+            totalPrice = cartItems.stream()
+                    .mapToDouble(item -> item.getProduct().getFees() * item.getQuantity())
+                    .sum();
+        }
+        model.addAttribute("totalPrice", totalPrice);
+        session.setAttribute("totalPrice", totalPrice);
 
 
         return modelAndView;

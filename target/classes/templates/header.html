@@ -64,11 +64,8 @@
                 <div class="ref-totals">
                     <div class="ref-subtotal">
                         <div class="ref-row"><span>Total</span>
-                           <div th:with="total=${0}">
-                        <span th:each="item : ${cart}"
-                              th:with="total=${total + item.product.fees * item.quantity}"></span>
-                            <span th:text="${total}"></span>
-                           </div>
+                        <span></span>
+                            <span th:text="${totalPrice}"></span>
                         </div>
                     </div>
                     <div class="ref-shipping-taxes">Shipping and taxes are calculated during checkout.</div>
