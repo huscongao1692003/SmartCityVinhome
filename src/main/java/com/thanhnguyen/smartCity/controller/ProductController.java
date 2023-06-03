@@ -6,6 +6,7 @@ import com.thanhnguyen.smartCity.repository.PersonRepository;
 import com.thanhnguyen.smartCity.repository.ProductRepository;
 import com.thanhnguyen.smartCity.service.ProductService;
 import com.thanhnguyen.smartCity.ultils.ImageUtils;
+import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
@@ -36,11 +37,14 @@ public class ProductController {
     private ProductService productService;
 
     @RequestMapping(value={"/product"})
-    public ModelAndView displayProductPage() {
+    public ModelAndView displayProductPage(HttpSession session) {
         List<Product> products = productService.getAllProduct();
         ModelAndView modelAndView = new ModelAndView("products.html");
         modelAndView.addObject("products",products);
         modelAndView.addObject("product", new Product());
+        modelAndView.addObject("cart", session.getAttribute("cart"));
+        modelAndView.addObject("totalItems", session.getAttribute("totalItems"));
+
         return modelAndView;
     }
     //Function of Product

@@ -24,10 +24,6 @@ public class CartController {
     private ProductRepository productRepository;
 
 
-    @RequestMapping(value = {"/payment"})
-    public String displayHomePage() {
-        return "shopping_cart.html";
-    }
 
     @RequestMapping(value = "index", method = RequestMethod.GET)
     public String index() {
@@ -43,7 +39,7 @@ public class CartController {
         return -1; // Return -1 if the item does not exist
     }
     @RequestMapping(value = "/addItemToCart", method = RequestMethod.GET)
-    public ModelAndView addItem(HttpSession session, @RequestParam int productId, Model model) {
+    public String addItem(HttpSession session, @RequestParam int productId, Model model) {
         Optional<Product> optionalProduct = productRepository.findById(productId);
         if(optionalProduct.get() != null){
             if (session.getAttribute("cart") == null) {
@@ -64,13 +60,35 @@ public class CartController {
         } else {
             System.out.println("No Product!!!!");
         }
+        List<Item> cartItem = (List<Item>) session.getAttribute("cart");
+        int totalItems = 0;
+        if (cartItem != null) {
+            totalItems = cartItem.stream().mapToInt(Item::getQuantity).sum();
+        }
+        model.addAttribute("totalItems", totalItems);
+        session.setAttribute("totalItems", totalItems);
+        model.addAttribute("cart", session.getAttribute("cart"));
 
-        ModelAndView modelAndView = new ModelAndView("products.html");
-
-        model.addAttribute("cart", session.getAttribute("cart")); // Add the cart attribute to the model
-        return modelAndView;
+        return "redirect:/product";
     }
 
+    @RequestMapping(value = "/remove", method = RequestMethod.GET)
+    public String remove(@RequestParam int productId, HttpSession session) {
+        Product productModel = new Product();
+        List<Item> cart = (List<Item>) session.getAttribute("cart");
+        int index = this.exists(productId, cart);
+        cart.remove(index);
+        session.setAttribute("cart", cart);
+        return "redirect:/product";
+    }
 
+    @RequestMapping(value = {"/payment"})
+    public ModelAndView displayHomePage(Model model, HttpSession session) {
+        ModelAndView modelAndView = new ModelAndView("shopping_cart.html");
+        modelAndView.addObject("cart",session.getAttribute("cart"));
+
+
+        return modelAndView;
+    }
 }
 
