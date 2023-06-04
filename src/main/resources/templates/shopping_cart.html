@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdn.reflowhq.com/v2/toolkit.min.css">
     <link rel="stylesheet" href="assets/css/Inter.css">
     <link rel="stylesheet" href="assets/css/cart.css">
+
 </head>
 
 <body>
@@ -61,6 +62,7 @@
         </div>
 
 
+    <form th:object="${paymentForm}" th:action="@{/pay}" method="post" onsubmit="return validatePaymentMethod()">
 
         <div class="row justify-content-center">
             <div class="col-lg-12">
@@ -70,13 +72,16 @@
                             <div class="row d-flex px-3 radio">
                                 <img class="pay" src="https://i.imgur.com/WIAP9Ku.jpg">
                                 <p class="my-auto">Credit Card</p>
+                                <input type="radio" name="paymentMethod" value="creditCard" id="creditCardRadio">
                             </div>
                             <div class="row d-flex px-3 radio gray">
-                                <img class="pay" src="https://i.imgur.com/OdxcctP.jpg">
+                                <img class="pay" src="https://developers.momo.vn/v3/vi/assets/images/icon-52bd5808cecdb1970e1aeec3c31a3ee1.png">
+                                <input  type="radio" name="paymentMethod" value="momo" id="momoRadio">
                                 <p class="my-auto">Momo</p>
                             </div>
-                            <div class="row d-flex px-3 radio gray mb-3">
+                            <div class="row d-flex px-3 radio gray mb-3" >
                                 <img class="pay" src="https://i.imgur.com/cMk1MtK.jpg">
+                                <input  type="radio" name="paymentMethod" value="paypal" id="paypalRadio">
                                 <p class="my-auto">PayPal</p>
                             </div>
                         </div>
@@ -117,19 +122,20 @@
                                 <p class="mb-1 text-left">Total (tax included)</p>
                                 <h6 class="mb-1 text-right" th:text="${totalPrice +2}">$26.48</h6>
                             </div>
-                            <form method="post" th:action="@{/pay}">
+<!--                            <form method="post" th:action="@{/pay}">-->
                             <input type="text" style="display:none" th:value="${totalPrice+2}" name="price" />
-                            <button class="btn-block btn-blue">
+                            <button class="btn-block btn-blue" type="submit">
                             <span>
                                 <span id="checkout" >Checkout</span>
                             </span>
                             </button>
-                            </form>
+<!--                            </form>-->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </form>
     </div>
 </div>
     <!-- footer block -->
@@ -172,6 +178,25 @@ $('.plus-minus .minus').click(function(){
 
 });
     </script>
+<script>
+ function validatePaymentMethod() {
+        var paymentMethod = document.querySelector('input[name="paymentMethod"]:checked');
+        if (!paymentMethod) {
+            alert("Please select a payment method.");
+            return false;
+        }
+
+        // Update the form action based on the selected payment method
+        var form = document.querySelector('form');
+        if (paymentMethod.value === 'paypal') {
+            form.action = '/pay'; // Update the action for PayPal
+        } else {
+            form.action = '/product'; // Default action for other payment methods
+        }
+
+        return true;
+    }
+</script>
 </body>
 
 </html>

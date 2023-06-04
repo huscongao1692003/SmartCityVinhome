@@ -9,4 +9,13 @@ public class PriceController {
     public String displayPricePage() {
         return "pricing.html";
     }
+
+    @RequestMapping(value={"/basic"})
+    public String basicService(){
+        return "pricing.html";
+    }
+    @RequestMapping(value={"/pro"})
+    public String proService(){
+        return "pricing.html";
+    }
 }

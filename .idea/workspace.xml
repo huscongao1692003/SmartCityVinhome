@@ -4,14 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46694ebf-2257-44c8-8084-1591b71ee5e4" name="Changes" comment="fix some bug">
+    <list default="true" id="46694ebf-2257-44c8-8084-1591b71ee5e4" name="Changes" comment="fix important bug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/config/ProjectSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/config/ProjectSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/controller/CartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/controller/PaypalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/controller/PaypalController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/controller/PriceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/controller/PriceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/thanhnguyen/smartCity/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/pricing.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/pricing.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/shopping_cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/shopping_cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/success.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/success.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thanhnguyen/smartCity/config/ProjectSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thanhnguyen/smartCity/config/ProjectSecurityConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/thanhnguyen/smartCity/controller/CartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thanhnguyen/smartCity/controller/CartController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thanhnguyen/smartCity/controller/PaypalController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thanhnguyen/smartCity/controller/PaypalController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/thanhnguyen/smartCity/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/thanhnguyen/smartCity/controller/ProductController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/shopping_cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/shopping_cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/success.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/success.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +32,8 @@
       <list>
         <option value="AnnotationType" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -209,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685784321673</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="fix important bug">
+      <created>1685785072926</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1685785072926</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -239,7 +255,8 @@
     <MESSAGE value="update cart, fix bug" />
     <MESSAGE value="adding paypal payment" />
     <MESSAGE value="fix some bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix some bug" />
+    <MESSAGE value="fix important bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix important bug" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

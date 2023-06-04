@@ -3,11 +3,11 @@ package com.thanhnguyen.smartCity.controller;
 import com.thanhnguyen.smartCity.model.Item;
 import com.thanhnguyen.smartCity.model.Product;
 import com.thanhnguyen.smartCity.repository.ProductRepository;
-import com.thanhnguyen.smartCity.service.ProductService;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -108,9 +108,8 @@ public class CartController {
         }
         model.addAttribute("totalPrice", totalPrice);
         session.setAttribute("totalPrice", totalPrice);
-
-
         return modelAndView;
     }
+
 }
 

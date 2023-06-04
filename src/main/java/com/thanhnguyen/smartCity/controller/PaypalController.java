@@ -2,7 +2,9 @@ package com.thanhnguyen.smartCity.controller;
 
 import com.thanhnguyen.smartCity.config.PaypalPaymentIntent;
 import com.thanhnguyen.smartCity.config.PaypalPaymentMethod;
+import com.thanhnguyen.smartCity.repository.OrderRepository;
 import com.thanhnguyen.smartCity.service.PaypalService;
+import jakarta.servlet.http.HttpSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +24,9 @@ public class PaypalController {
     private Logger log = LoggerFactory.getLogger(getClass());
     @Autowired
     private PaypalService paypalService;
+
+    @Autowired
+    OrderRepository orderRepository;
 
     @PostMapping("/pay")
     public String pay(@RequestParam("price") double price ){
@@ -49,7 +54,7 @@ public class PaypalController {
         return "cancel";
     }
     @GetMapping(SUCCESS_URL)
-    public String successPay(@RequestParam("paymentId") String paymentId, @RequestParam("PayerID") String payerId){
+    public String successPay(@RequestParam("paymentId") String paymentId, @RequestParam("PayerID") String payerId, HttpSession session){
         try {
             Payment payment = paypalService.executePayment(paymentId, payerId);
             if(payment.getState().equals("approved")){
@@ -58,6 +63,7 @@ public class PaypalController {
         } catch (PayPalRESTException e) {
             log.error(e.getMessage());
         }
+        session.invalidate();
         return "redirect:/";
     }
 }

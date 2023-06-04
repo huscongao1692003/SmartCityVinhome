@@ -44,7 +44,7 @@ public class ProductController {
         modelAndView.addObject("product", new Product());
         modelAndView.addObject("cart", session.getAttribute("cart"));
         modelAndView.addObject("totalItems", session.getAttribute("totalItems"));
-
+        modelAndView.addObject("totalPrice",session.getAttribute("totalPrice"));
         return modelAndView;
     }
     //Function of Product
