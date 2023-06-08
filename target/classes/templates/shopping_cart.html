@@ -47,8 +47,8 @@
                         <div class="row d-flex justify-content-end px-3">
                             <p class="mb-0" id="cnt1" th:text="${item.quantity}"></p>
                             <div class="d-flex flex-column plus-minus">
-                                <span class="vsm-text plus" th:href="@{/addItemToCart(productId=${item.product.productId})}">+</span>
-                                <span class="vsm-text minus" th:href="@{/remove(productId=${item.product.productId})}">-</span>
+                                <span class="vsm-text plus" th:action="@{/addItemToCart(productId=${item.product.productId})}">+</span>
+                                <span class="vsm-text minus" th:action="@{/remove(productId=${item.product.productId})}">-</span>
                             </div>
                         </div>
                     </div>

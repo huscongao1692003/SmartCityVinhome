@@ -52,6 +52,7 @@ public class ProjectSecurityConfig {
                 .requestMatchers("/about").permitAll()
                 .requestMatchers("/login").permitAll()
                 .requestMatchers("/pay").authenticated()
+                .requestMatchers("/viewService").authenticated()
                 .requestMatchers("/pay/**").authenticated()
                 .requestMatchers("/remove").permitAll()
                 .requestMatchers("/displayProduct").hasRole("ADMIN")
