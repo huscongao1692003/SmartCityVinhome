@@ -11,22 +11,15 @@ import javax.annotation.processing.Generated;
 
 @Entity
 @Data
-@Table(name = "Orders", //
-        uniqueConstraints = { @UniqueConstraint(columnNames = "Order_Num") })
+@Table(name = "Orders")
 public class Order extends BaseEntity {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO,generator="native")
     @GenericGenerator(name = "native",strategy = "native")
     private int id;
 
-    @Column(name = "Order_Num", nullable = false)
-    private int orderNum;
-
     @Column(name = "Price", nullable = false)
     private int price;
-
-    @Column(name = "Amount", nullable = false)
-    private int amount;
 
     @Column(name = "Corrency", nullable = false)
     private String Currency;
@@ -43,12 +36,12 @@ public class Order extends BaseEntity {
     @Column(name = "Customer_Name", length = 255, nullable = false)
     private String customerName;
 
-    @Column(name = "Customer_Address", length = 255, nullable = false)
+    @Column(name = "Customer_Address", length = 255, nullable = true)
     private String customerAddress;
 
     @Column(name = "Customer_Email", length = 128, nullable = false)
     private String customerEmail;
 
-    @Column(name = "Customer_Phone", length = 128, nullable = false)
+    @Column(name = "Customer_Phone", length = 128, nullable = true)
     private String customerPhone;
 }

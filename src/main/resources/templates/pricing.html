@@ -47,12 +47,14 @@
                                                 <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"></path>
                                             </svg></span><span>Waiting 2-4 hour</span></li>
                                 </ul>
-                            </div><stripe-buy-button sec:authorize="isAuthenticated()"
-                                                     th:action="@{/basic}"
+                            </div>
+                            <div th:href="@{/basic}">
+                            <stripe-buy-button sec:authorize="isAuthenticated()"
                                 buy-button-id="buy_btn_1NFFHAFWsGfdekkXu469wNIU"
                                 publishable-key="pk_test_51NFFBEFWsGfdekkXjFsCk5TGqbaUI6xMNo4nV0vM2XkV360qvtyfTLC1vBPctpebPut6jVezVnCqywc0nhPkCnit00qPluayld"
                         >
                         </stripe-buy-button>
+                            </div>
                         </div>
                     </div>
                 </div>
