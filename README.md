@@ -14,7 +14,8 @@ Function:
 - CRUD User
 - Subscribe Email (mailtrap)
 - Security using Spring security(SecurityFilterChain)
-- Payment(Momo, Paypal)
+- Payment(Momo, Paypal, Credit-card)
+- Stripe
 - Buy a service, product
 - Upload Image
 - Donate(payment momo then send msg to gmail)
